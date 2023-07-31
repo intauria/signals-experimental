@@ -1,3 +1,4 @@
+import { CdVisualizerDirective, injectCdCounter, SignalComponentFeature } from '@angular-architects/signals-experimental';
 import { Component, signal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
@@ -6,6 +7,10 @@ import { FormsModule } from "@angular/forms";
   standalone: true,
   imports: [
     FormsModule
+  ],
+  hostDirectives: [
+    CdVisualizerDirective,
+    SignalComponentFeature
   ],
   template: `
     <div class="card">
@@ -22,9 +27,16 @@ import { FormsModule } from "@angular/forms";
         </div>
       </div>
     </div>
+
+    {{ count() }}
   `
 })
 export class CounterComponent {
+  count = injectCdCounter({
+    viewType: 'UI Component',
+    viewDetails: 'Counter'
+  });
+
   counter = signal(250);
 
   increase() {

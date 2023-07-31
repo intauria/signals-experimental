@@ -1,3 +1,4 @@
+import { SignalComponentFeature } from '@angular-architects/signals-experimental';
 import { NgIf } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
@@ -7,6 +8,9 @@ import { Component, signal } from '@angular/core';
   standalone: true,
   templateUrl: 'navbar.component.html',
   imports: [NgIf],
+  hostDirectives: [
+    SignalComponentFeature
+  ],
   styles: [`
     .navbar {
       position: fixed;

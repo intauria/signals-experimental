@@ -1,3 +1,4 @@
+import { CdVisualizerDirective, injectCdCounter, SignalComponentFeature } from '@angular-architects/signals-experimental';
 import { DatePipe, JsonPipe, NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
 import { Component, computed, effect, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,11 +17,21 @@ import { Flight } from './../../logic/model/flight';
     RouterLink,
     FormsModule,
     CardComponent,
-    CounterComponent
+    CounterComponent,
+    CdVisualizerDirective
+  ],
+  hostDirectives: [
+    CdVisualizerDirective,
+    SignalComponentFeature
   ],
   templateUrl: './search.component.html'
 })
 export class SearchComponent {
+  count = injectCdCounter({
+    viewType: 'Smart Component',
+    viewDetails: 'Flight Search'
+  });
+
   from = signal('Paris');
   to = signal('London');
   additionalInfo = signal('');
@@ -37,7 +48,6 @@ export class SearchComponent {
   ]);
 
   constructor() {
-    console.log()
     effect(
       () => console.log('%c' + this.logMessage(), 'color: green')
     );

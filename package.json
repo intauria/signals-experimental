@@ -11,10 +11,11 @@
   "private": true,
   "dependencies": {
     "@angular-architects/paper-design": "^1.0.3",
+    "@angular-architects/signals-experimental": "^1.0.2-ng.16.1.7",
     "@angular/animations": "^16.1.7",
     "@angular/common": "^16.1.7",
     "@angular/compiler": "^16.1.7",
-    "@angular/core": "^16.1.7",
+    "@angular/core": "file:node_modules/@angular-architects/signals-experimental/.bin/angular-core-patch-16.1.7.tgz",
     "@angular/forms": "^16.1.7",
     "@angular/platform-browser": "^16.1.7",
     "@angular/platform-browser-dynamic": "^16.1.7",

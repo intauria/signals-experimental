@@ -1,3 +1,4 @@
+import { CdVisualizerDirective, injectCdCounter, SignalComponentFeature } from '@angular-architects/signals-experimental';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent, SidebarComponent } from './core';
@@ -9,6 +10,10 @@ import { NavbarComponent, SidebarComponent } from './core';
   imports: [
     RouterOutlet,
     NavbarComponent, SidebarComponent
+  ],
+  hostDirectives: [
+    CdVisualizerDirective,
+    SignalComponentFeature
   ],
   template: `
     <div class="wrapper">
@@ -28,6 +33,8 @@ import { NavbarComponent, SidebarComponent } from './core';
         <footer></footer>
       </div>
     </div>
+
+    {{ count() }}
   `,
   styles: [`
     .sidebar {
@@ -42,4 +49,8 @@ import { NavbarComponent, SidebarComponent } from './core';
   `]
 })
 export class AppComponent {
+  count = injectCdCounter({
+    viewType: 'Root Component',
+    viewDetails: 'App Core Design'
+  });
 }

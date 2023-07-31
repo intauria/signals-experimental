@@ -1,3 +1,4 @@
+import { CdVisualizerDirective, injectCdCounter, SignalComponentFeature } from '@angular-architects/signals-experimental';
 import { DatePipe, NgStyle } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -9,6 +10,10 @@ import { Flight } from '../logic/model/flight';
   imports: [
     NgStyle, DatePipe,
     RouterLink
+  ],
+  hostDirectives: [
+    CdVisualizerDirective,
+    SignalComponentFeature
   ],
   template: `
     <div
@@ -39,9 +44,16 @@ import { Flight } from '../logic/model/flight';
         </p>
       </div>
     </div>
+
+    {{ count() }}
   `
 })
 export class CardComponent {
+  count = injectCdCounter({
+    viewType: 'UI Component',
+    viewDetails: 'Flight Card'
+  });
+
   @Input() item?: Flight | undefined;
   private _selected = false;
   get selected() {

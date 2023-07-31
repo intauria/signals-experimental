@@ -1,3 +1,4 @@
+import { CustomChangeDetectionMode, rebootstrapWithChangeDetectionStrategy } from '@angular-architects/signals-experimental';
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLinkActive, RouterLinkWithHref } from '@angular/router';
@@ -19,4 +20,8 @@ import { RouterLinkActive, RouterLinkWithHref } from '@angular/router';
   `]
 })
 export class SidebarComponent {
+  setChangeDetection = {
+    Zone: () => rebootstrapWithChangeDetectionStrategy(CustomChangeDetectionMode.Zone),
+    Signals: () => rebootstrapWithChangeDetectionStrategy(CustomChangeDetectionMode.Signals)
+  };
 }
