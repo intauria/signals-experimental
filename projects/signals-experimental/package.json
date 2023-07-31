@@ -1,0 +1,20 @@
+{
+  "name": "@angular-architects/signals-experimental",
+  "version": "1.0.0-ng.16.1.7",
+  "license": "MIT",
+  "repository": {
+    "type": "GitHub",
+    "url": "https://github.com/intauria/signals-experimental"
+  },
+  "author": {
+    "name": "Michael Egger-Zikes | intauria.com"
+  },
+  "peerDependencies": {
+    "@angular/common": "16.1.7",
+    "@angular/core": "16.1.7"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
