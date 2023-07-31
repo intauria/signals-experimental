@@ -88,7 +88,7 @@ This is library allows to configure an experimental Angular Change Detection str
      }
     ```
 
-6. That's all - try out this experimental mode and tell us how it works for you. Altough the upcoming Angular implementation of Signal Components (could be published with Angular v18) likely will vary, any experiment with your codebase may be helpful to provide useful feedback to the Angular team to improve the final API.
+6. That's all - try out this experimental mode and tell us how it works for you. Although the upcoming Angular implementation of Signal Components (could be published with Angular v18) likely will vary, any experiment with your codebase may be helpful to provide useful feedback to the Angular team to improve the final API.
 
 
 ## Roadmap
