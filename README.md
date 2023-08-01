@@ -4,7 +4,7 @@
 
 [🌐 Hosted Demo](https://www.intauria.com/angular-architects/8ce83a8f-3713-41a1-9e6b-66164f01734e/signal-cd/) \
 [🎞️ Video: Zone-based vs. Signal-based Change Detection](https://twitter.com/MikeZks/status/1684277119256231937) \
-[❓ Questions: Feel free to use the Q&A section](https://github.com/intauria/signals-experimental/discussions)
+[❓ Questions: Feel free to use the Q&A section](https://github.com/intauria/signals-experimental/discussions/1)
 
 This is library allows to configure an experimental Angular Change Detection strategy based on Signals.
 
