@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/%40angular-architects%2Fsignals-experimental.svg)](https://www.npmjs.com/package/%40angular-architects%2Fsignals-experimental)
 
 [🌐 Hosted Demo](https://www.intauria.com/angular-architects/8ce83a8f-3713-41a1-9e6b-66164f01734e/signal-cd/)
+[🎞️ Video: Zone-based vs. Signal-based Change Detection](https://twitter.com/MikeZks/status/1684277119256231937)
 
 This is library allows to configure an experimental Angular Change Detection strategy based on Signals.
 
@@ -14,7 +15,7 @@ This is library allows to configure an experimental Angular Change Detection str
   - [Roadmap](#roadmap)
   
 
-![Demo App](/.bin/demo-app.png)
+![Demo App](https://i.ibb.co/d4tZdnm/demo-app.png)
 
 
 ## Supported Features
